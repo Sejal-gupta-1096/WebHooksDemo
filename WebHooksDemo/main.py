@@ -11,7 +11,7 @@ def index():
 
 
 @app.post("/github")
-def api_github_response(request:Request):
+def api_github_response():
     print(json.dumps(request.json));
 
 if __name__ == "__main__":
