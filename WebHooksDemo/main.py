@@ -12,7 +12,7 @@ def index():
 
 @app.post("/github")
 async def api_github_response(request:Request):
-   print(request.body)
+   print(request.body);
     
 
 if __name__ == "__main__":
