@@ -13,7 +13,7 @@ def index():
 @app.post("/github")
 async def api_github_response(request:Request):
     data = json.loads(request.payload)
-    print(data)
+    print(data);
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
