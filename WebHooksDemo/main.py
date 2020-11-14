@@ -1,4 +1,4 @@
-from fastapi import FastAPI,Form,Response
+from fastapi import FastAPI,Request
 import uvicorn
 import json
 
@@ -11,8 +11,8 @@ def index():
 
 
 @app.post("/github")
-def api_github_response(From: str = Form(...), Body: str = Form(...)):
-    print(f"{Form}");
+def api_github_response(request:Request):
+    print(request.json());
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
